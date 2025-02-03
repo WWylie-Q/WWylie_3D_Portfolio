@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wendall Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <audio id="music" loop>
+      <source src="music/background.mp3" type="audio/mp3">
+  </audio>
+  
+  <script>
+      document.addEventListener("click", () => {
+          let music = document.getElementById("music");
+          if (music.paused) {
+              music.play();
+          }
+      }, { once: true }); // Ensures it only runs once
+  </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
